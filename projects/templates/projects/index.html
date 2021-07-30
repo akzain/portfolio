@@ -1,0 +1,12 @@
+{% extends 'pages/main.html' %}
+{% block content %}
+{% for project in projects %}
+<a href="{% url 'single_project' project.id %}">
+
+    {{ project.title }} <br>
+    <img src="{{ project.image.url }}">
+</a>
+<br>
+<hr>
+{% endfor %}
+{% endblock %}
