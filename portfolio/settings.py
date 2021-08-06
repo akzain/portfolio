@@ -129,4 +129,9 @@ STATICFILES_DIRS = [
 ]
 
 MEDIA_ROOT = BASE_DIR / "static/images"
-STATIC_ROOT = BASE_DIR / "staticfiles"
+
+import django_heroku
+CORS_ALLOW_ALL_ORIGINS = True
+STATIC_ROOT = BASE_DIR/'staticfiles'
+STATIC_URL = '/static/'
+django_heroku.settings(locals())
