@@ -2,6 +2,10 @@ from django.urls import path
 from .views import *
 
 urlpatterns = [
-    path("", index, name="homepage"),
-    path("single-project/<str:pk>/", singleProject, name="single_project"),
+    path('', getRoutes),
+    path('projects', getProjects),
+    path('project/<str:pk>/', getProject),
+    path('create-project/', createProject),
+    path('update-project/<str:pk>/', updateProject),
+    path('delete-project/<str:pk>/', deleteProject),
 ]
