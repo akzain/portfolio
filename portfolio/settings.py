@@ -12,9 +12,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-qp^2ucsac)6%45o#p^6#q@34n+%k$n*gf$*iyb0vic)-7xdynq"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["https://portfolio-api-zain.herokuapp.com"]
 
 
 # Application definition
@@ -30,7 +30,7 @@ INSTALLED_APPS = [
     "blog.apps.BlogConfig",
     "about.apps.AboutConfig",
     "rest_framework",
-    'ckeditor'
+    "ckeditor",
 ]
 
 MIDDLEWARE = [
@@ -69,8 +69,12 @@ WSGI_APPLICATION = "portfolio.wsgi.application"
 
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "daqad7f6lo0c2o",
+        "USER": "mkttruvobdjzoy",
+        "PASSWORD": "7bf70f19a94ea9db3ada192e26213139b563962e5272f46edfca62e4889a261d",
+        "HOST": "ec2-54-90-211-192.compute-1.amazonaws.com",
+        "PORT": "5432",
     }
 }
 
